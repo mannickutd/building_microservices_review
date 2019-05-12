@@ -16,4 +16,13 @@
   8. Architectual safety, we cannot have one badly behaved system ruin the party for everyone. We have to code, architect for failure of services within the system, as well as the network itself. Building in circuit breakers is a wise choice to handle spikes or unintended usage of the system. Being consistent with HTTP codes for example, if all services are being consistent it is much easier to manage the health of different parts of the system.
   9. Goverance through code, defining and agreeing upon standards is one thing, making sure everyone abides by the rules is another. Exemplars and service templates go along way to helping developers achieve what you want.
   10. Technical debt, is about incurring short term benefit with incurring a cost to operate or refactor the service later on. Part of an architects job is about ensuring that the right balance is achieved.
-  11. Exception handling, 
+  11. Exception handling, if enough exceptions are found it may reflect a new understanding of the world.
+  12. Governance and leading from the center, "Governance ensures that enterprise objectives are achieved by evaluating stakeholder needs, conditions and options; setting direction through prioritisation and decision making; and monitoring performance, compliance and progress against agreed-on direction and objectives.
+  13. Building a team, much of the role of the technical leader is about being part of the team that will help build out the vision. Architects are an active participant in shaping and implementing the vision.
+* Core responsibilities of the evolutionary architect:
+  1. Vision - Ensure there is a clearly communicated technical vision for the system that will help your system meet the requirements of your customers and organisation.
+  2. Empathy - Understand the impact of your decisions on your customers and colleagues.
+  3. Collaboration - Engage with as many of your peers and colleagues as possible to help define, refine, and execute the vision.
+  4. Adaptability - Make sure that the technical vision changes as your customers or organisation requires it.
+  5. Autonomy - Find the right balance between standardizing and enabling autonomy for your teams.
+  6. Governance - Ensure that the system being implemented fits the technical vision.
