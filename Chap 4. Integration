@@ -1,0 +1,13 @@
+## Chapter 4 Integration
+
+* Looking for ideal integration technologies:
+  1. *Avoid breaking changes*, use technologies that allows you to change with the environment.
+  2. *Keep your APIs technology agnostic*, the one certainty is change, keep the API's used to talk between microservices technology agnostic.
+  3. *Make the service simple for consumers*, perhaps there is a need for a client library to be provided. Documentation is a must.
+  4. *Hide internal implementation detail*, if the consumer needs to understand internal implementation this will lead to coupling. Changes on the server side shouldn't impact consumers except for major version changes.
+* Simple CRUD operations are usually not sufficient for enterprise services.
+* Avoid sharing a DB for multiple services. The DB table will couple the implementation of the of the data model to every service which works with that table.
+* Synchronous vs Asynchronous, synchonous -> request/response, asynchronous -> event based. Event based is more decoupled in its nature but relies on clients synchronizing on multiple events. Synchonous is easier to reason and understand for consumers.
+* Orchestration vs choregraphy, more and more complex logic in the business process means the logic is spread out over the multiple services. In general, systems that tend more toward the choregraphed approach are more loosely coupled, and are more flexible and amenable to change. There is more work to monitor and track processes across system boundaries.
+* Remote procedure call refers to a technique of making a local call and having it execute on a remote service somewhere. Many implementations are binary in nature, make appear that the work in happening locally.
+* Local calls are not like remote calls. The core idea of RPC is that the complexity is hidden in the remote call. Local calls don't have the same costs associated with them. Latency/response times, marshalling and unmarshalling payloads can all be costly. The network can be unreliable and in the worst case scenario the developer will not know if they're making an external call.
