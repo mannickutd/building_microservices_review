@@ -1,0 +1,11 @@
+## Bringing It All Together
+
+### Principles of Microservices
+
+* Model around business concepts, experience has shown us that interfaces structured around business-bounded contexts are more stable than those structured around technical concepts. Use bounded-contexts to define potential domain boundaries.
+* Adopt a culture of automation, microservices add a lot of complexity, a key part comes from the sheer number of moving parts we have to deal with. Front-loading effort to create the tooling to support microservices can make a lot of sense. Automated testing is essential. Continuous integration and continuous delivery are important parts of automating the release of changes to the system.
+* Hide internal implementation details, to maximise the ability of one service to evolve independently of any others, it is vital that we hide implementation details.
+* Decentralise all the things, to maximise the autonomy of the system we need to be constantly looking for the chance to delegate decision making and control to the teams that own the services themselves. We should be looking to make all processes within the business self servicable and self discoverable. Avoid approaches like enterprise service bus or orchestration systems, which can lead to centralization of business logic and dumb services. Instead, prefer choregraphy over orchestration and dumb middleware, with smart endpoints to ensure that you keep associated logic and data within the service boundaries, helping keep things cohesive.
+* Independently deployable, services should be independently deployable, remove client, service coupling. Use consumer driven contracts to catch breaking changes before they happen. Consumers should decide when they update themselves and you need to accomodate this.
+* Isolate failure, design/architect for failure. Timeouts, bulkheads and circuit breakers to limit the fallout of a failing component. Fail gracefully. Understand the implications of network partition might be, and whether sacrificing availability or consistency is suitable for your use case.
+* Highly observable, use semantic monitoring to see if your system is behaving correctly. Aggregate your logs, and aggregate your stats. Logs should be searchable and traceable from client through your system and back to your client.
